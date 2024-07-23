@@ -1,6 +1,6 @@
 ### LLaMa 3 FREE AND LOCAL - CHATGPT clone
 
-<img src="https://github.com/lefevbre-organization/llama3/blob/main/ia.jpg" width="200">
+<img src="https://github.com/lefevbre-organization/llama3/blob/main/ia.jpg" width="400">
 
 ### Experiment Workflow Description
 
