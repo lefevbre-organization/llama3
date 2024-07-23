@@ -1,6 +1,6 @@
 ### LLaMa 3 FREE AND LOCAL - CHATGPT clone
 
-<img src="https://github.com/lefevbre-organization/llama3/blob/main/ia.jpg" width="500">
+<img src="https://github.com/lefevbre-organization/llama3/blob/main/ia.jpg" width="400">
 
 ### Experiment Workflow Description
 
@@ -14,8 +14,6 @@ This experiment integrates Ollama with the LLaMa3 model running locally in Docke
 5. Install the custom client add-on in Google Gmail for streamlined communication with the integrated system.
 
 **Next Steps (To-Do):**
-- Code interpreter (open source) for the automatic execution of tasks using the LLaMa3.
+- Implement an "Open interpreter" for the automatic execution of tasks using the LLM of LLaMa3 via [Open Interpreter](https://www.openinterpreter.com).
 
-This workflow represents a seamless interaction between Ollama, LLaMa3 model, Python Flask API, and Google Gmail add-on for optimized experimental outcomes.
-
-
+This workflow represents a seamless interaction between Ollama, LLaMa3 model, Python Flask API, Google Gmail add-on, and Open Interpreter for optimized experimental outcomes.
