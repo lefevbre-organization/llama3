@@ -1,39 +1,39 @@
 # llama3
 LLaMa 3  lab
 
-## Dockerfile Summary
 
-The following `Dockerfile` is tailored to create a Docker image that amalgamates a Flask application with Ollama functionalities. Noteworthy, the Ollama model is executed locally. Key insights from the Dockerfile include:
+```markdown
+# Docker Project: LLaMA 3 and Flask Application
 
-- **Setup**: Utilizes "ollama/ollama" as the base image and installs essential dependencies.
-- **Application Integration**: Incorporates Flask settings and connects with Ollama and LLaMA 3 functions.
-- **Port Configuration**: Exposes the Flask application on port 5000 and LLaMA 3 on port 11434.
-- **Execution Command**: Activates Ollama and LLaMA 3 processes before launching the Flask application within the container.
+This repository contains Dockerfiles and instructions to run two Docker containers: one for LLaMA 3 and another for a Python application with Flask that consumes the API exposed by LLaMA 3.
 
-### Usage Instructions
+## Running the Containers
 
-1. **Building the Image**:
-   - Build the Docker image using `docker build -t image_name .` in the Dockerfile directory.
-   
-2. **Running the Container**:
-   - Start the container with `docker run -p 5000:5000 -p 11434:11434 image_name`, ensuring the Ollama model's local execution.
+### Building and Running the LLaMA 3 Container
 
----
+```bash
+# Build and run the LLaMA 3 container
+docker build -t ollama-container .
+docker run -p 11434:11434 ollama-container
+```
 
-## Flask Application Summary
+### Building and Running the Python and Flask Container to Consume the API
 
-The provided `app.py` script houses a Flask application that interfaces with the locally hosted Ollama chatbot model. Highlighted features of the Flask application:
+```bash
+# Build and run the Python and Flask container
+docker build -t flask-app .
+docker run -p 5000:5000 flask-app
+```
 
-### Features
-- **Interpretation Endpoint**: Processes POST requests to `/interpret` for user input interpretation.
-- **Ollama Integration**: Communicates with the Ollama model (locally executed) to generate responses.
-- **Error Handling**: Manages exceptions to provide concise error responses.
+### Consuming the API of LLaMA 3 in the Flask Application
 
-### Endpoints
-- **POST `/interpret` Endpoint**:
-  - Expects JSON input with a user-provided `input`.
-  - Delivers a JSON response with the interpreted output from the locally hosted Ollama model.
+Make sure to set up the requests in your Flask application to consume the API exposed by LLaMA 3. Use the IP address of the LLaMA 3 container and the exposed port (`http://localhost:11434`, for example) in your Python code.
 
-### Execution
-- Execute the Flask application locally by running `python app.py`.
+## Repository Structure
+
+- `Dockerfile-ollama`: Dockerfile for the LLaMA 3 container.
+- `Dockerfile-flask`: Dockerfile for the Python and Flask container.
+- `app.py`: Script containing the Flask application that consumes LLaMA 3 API.
+- Other necessary files and directories for your application.
+
 
