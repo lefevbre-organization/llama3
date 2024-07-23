@@ -3,11 +3,6 @@ LLaMa 3  lab
 
 
 
-# llama3
-LLaMa 3  lab
-
-
-
 ```markdown
 # Docker Project: LLaMA 3 and Flask Application
 
